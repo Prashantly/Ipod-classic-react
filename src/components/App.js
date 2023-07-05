@@ -1,7 +1,14 @@
-import "./App.css";
+import React from "react";
+import { GlobalStyle } from "./GlobalStyle";
+import IpodWheel from "./IpodWheel";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <GlobalStyle />
+      <IpodWheel />
+    </>
+  );
 }
 
 export default App;
