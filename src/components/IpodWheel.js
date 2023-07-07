@@ -1,37 +1,24 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useRef } from "react";
 import Buttons from "./Buttons";
-
-const Container = styled.div`
-  position: relative;
-  width: 290px;
-  height: 224px;
-  background-color: #dcdcdc;
-
-  margin: auto;
-`;
-
-const Wheel = styled.div`
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 203px;
-  background-color: #fff;
-  box-shadow: 1px 5px 20px #555;
-  border-radius: 50%;
-  touch-action: none;
-`;
+import ZingTouch from "zingtouch";
 
 const IpodWheel = () => {
+  const wheelRef = useRef(null);
+  useEffect(() => {
+    const wheelElement = wheelRef.current;
+    console.log(wheelElement);
+    const zingTouch = new ZingTouch.Region(wheelElement);
+
+    // zingTouch.bind(wheelElement, "rotate", function (e) {
+    //   console.log("Rotate gesture emitted: " + e.detail.interval);
+    // });
+  }, []);
   return (
-    <Container>
-      <Wheel>
+    <div className="wheel-container">
+      <div ref={wheelRef} id="circle">
         <Buttons />
-      </Wheel>
-      {/* <!-- Add other controls and buttons here --> */}
-    </Container>
+      </div>
+    </div>
   );
 };
 
