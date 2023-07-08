@@ -1,25 +1,24 @@
 import React from "react";
 import { Battery } from "../icons";
+import raceCar from "../icons/race-car-racing.gif";
+import settings from "../icons/settings.gif";
 
-const Screen = () => {
-  return (
-    <div className="screen">
-      <div className="titlebar">
-        <div className="play-icon">
-          {/* display play icon */}
-          <i class="fa-solid fa-circle-play"></i>
-          {/* <i class="fa-solid fa-compact-disc fa-spin"></i> */}
-        </div>
-        <div className="title">
-          {/* display title of page */}
-          {/* {title} */}
-          ipod
-        </div>
-        <div id="battery" className="battery small">
-          {/* display battery */}
-          <Battery />
-        </div>
-      </div>
+const Screen = (props) => {
+  const {
+    displayHome,
+    displayCoverflow,
+    displayMusic,
+    displayGames,
+    displaySettings,
+  } = props.currentState.visibleComponent;
+
+  const { pageTitle } = props.currentState;
+  // console.log(pageTitle);
+
+  let renderComponent = null;
+
+  if (displayHome) {
+    renderComponent = (
       <div className="menu-options">
         <div id="coverflow" className="option selected">
           Cover Flow
@@ -34,6 +33,51 @@ const Screen = () => {
           Settings
         </div>
       </div>
+    );
+  } else if (displayCoverflow) {
+    renderComponent = (
+      <div>
+        <h1>Cover Flow</h1>
+      </div>
+    );
+  } else if (displayMusic) {
+    renderComponent = (
+      <div>
+        <h1>Cover Flow</h1>
+      </div>
+    );
+  } else if (displayGames) {
+    renderComponent = (
+      <div className="gameWrapper">
+        <img src={raceCar} alt="car game" />;
+      </div>
+    );
+  } else if (displaySettings) {
+    renderComponent = (
+      <div className="gameWrapper">
+        <img src={settings} alt="settings" />;
+      </div>
+    );
+  }
+
+  return (
+    <div className="screen custom">
+      <div className="titlebar">
+        <div className="play-icon">
+          {/* display play icon */}
+          <i className="fa-solid fa-circle-play"></i>
+          {/* <i class="fa-solid fa-compact-disc fa-spin"></i> */}
+        </div>
+        <div className="title">
+          {/* display title of page */}
+          {pageTitle}
+        </div>
+        <div id="battery" className="battery small">
+          {/* display battery */}
+          <Battery />
+        </div>
+      </div>
+      {renderComponent}
     </div>
   );
 };

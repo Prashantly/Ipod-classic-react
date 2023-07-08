@@ -114,7 +114,6 @@ ul {
   border: 2px solid rgb(179, 137, 137);
   animation: fadeFromBlack 0.5s;
   border-radius: 0.3125em;
-  padding-left: 2%;
   overflow: hidden;
 }
 
@@ -209,4 +208,21 @@ ul {
 .option.selected:after {
   border-bottom: 3px solid white;
   border-right: 3px solid white;
+}
+
+/* games and settings styles */
+.gameWrapper {
+  position: relative;
+  padding-top: 28px;
+  width: 17.2em;
+  height: 13em;
+  animation: fade 0.5s;
+}
+
+.custom .gameWrapper {
+  padding-left: 0;
+}
+.gameWrapper > img {
+  height: 100%;
+  width: 100%;
 }

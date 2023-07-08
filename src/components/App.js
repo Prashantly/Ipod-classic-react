@@ -158,7 +158,7 @@ function App() {
 
   return (
     <div className="Ipod">
-      <Screen />
+      <Screen currentState={state} />
       <IpodWheel
         onCenterBtnClick={handleCenterBtnClick}
         onMenuBtnClick={handleMenuBtnClick}
