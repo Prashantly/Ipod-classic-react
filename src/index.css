@@ -124,13 +124,52 @@ ul {
   }
 }
 
+/* Title bar Styles */
+
+.titlebar {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 14%;
+  text-align: center;
+  border-bottom: 1px solid #252521;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-icon {
+  position: absolute;
+  display: inline-block;
+  top: 12%;
+  left: 10px;
+  transform: translate(0, -50%);
+  height: 0;
+  width: 0;
+}
+
+.battery {
+  position: absolute;
+  right: 4px;
+  height: 40px;
+  width: 100px;
+}
+
+.battery.small {
+  transform: scale(0.5, 0.5);
+  transform-origin: 125% 30%;
+}
+
 .screen .menu-options {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 80%;
   position: relative;
-  top: 8%;
+  top: 15%;
   animation: fade 0.5s;
 }
 
