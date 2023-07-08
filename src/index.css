@@ -1,18 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
   background-color: #4776e6;
   background-image: linear-gradient(to left, #4776e6, #8e54e9);
-  font-family: "Montserrat", sans-serif;
+  font-family: "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 h2,
@@ -26,22 +34,24 @@ ul {
   list-style: none;
 }
 
-/* IpodWheel component styles */
-.wheel-container {
-  position: relative;
-  width: 290px;
-  height: 224px;
-  background-color: #dcdcdc;
-  margin: auto;
+.Ipod {
+  margin: 5% auto;
+  width: 20em;
+  background: #dadada;
+  height: 30em;
+  border-radius: 1.3em;
+  box-shadow: inset 0 0 2.4em #555;
 }
+
+/* IpodWheel component styles */
 
 #circle {
   position: relative;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 203px;
+  width: 190px;
+  height: 190px;
   background-color: #fff;
   box-shadow: 1px 5px 20px #555;
   border-radius: 50%;
@@ -51,8 +61,8 @@ ul {
 /* Button component styles */
 #circle .menuBtn {
   position: absolute;
-  top: 12%;
-  left: 38%;
+  top: 9%;
+  left: 37%;
   user-select: none;
   touch-action: none;
 }
@@ -83,11 +93,81 @@ ul {
 
 #circle .centerBtn {
   position: absolute;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   background-color: #dcdcdc;
   border-radius: 50%;
   box-shadow: inset 0 0 2.4em rgb(187, 181, 181);
   top: 37%;
   left: 36%;
+}
+
+/* screen styles */
+.Ipod .screen {
+  position: relative;
+  top: 0.9em;
+  margin: 0 auto;
+  width: 17em;
+  height: 13em;
+  background: #3e3d3d;
+  color: #cbcbcb;
+  border: 2px solid rgb(179, 137, 137);
+  animation: fadeFromBlack 0.5s;
+  border-radius: 0.3125em;
+  padding-left: 2%;
+  overflow: hidden;
+}
+
+@keyframes fadeFromBlack {
+  0% {
+    filter: brightness(0);
+  }
+}
+
+.screen .menu-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  position: relative;
+  top: 8%;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  from {
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+.menu-options .option {
+  padding-left: 12px;
+  padding-bottom: 4px;
+}
+
+.menu-options .option:after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  width: 7px;
+  height: 7px;
+  border-right: 3px solid #c1c1ba;
+  border-bottom: 3px solid #c1c1ba;
+  transform: rotate(-45deg) skew(7deg, 7deg);
+  transform-origin: 180%;
+}
+
+.menu-options .option.selected {
+  font-weight: bold;
+  background: linear-gradient(rgb(60, 184, 255) 0%, rgb(52, 122, 181) 100%);
+  color: #fff;
+  border-bottom: 2px solid #484647;
+}
+
+.option.selected:after {
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
 }
