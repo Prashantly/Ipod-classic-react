@@ -1,7 +1,8 @@
 import React from "react";
-import { Battery } from "../icons";
-import raceCar from "../icons/race-car-racing.gif";
-import settings from "../icons/settings.gif";
+import { Battery } from "../assets";
+import raceCar from "../assets/race-car-racing.gif";
+import settings from "../assets/settings.gif";
+import MusicAlbums from "./Music";
 
 const Screen = (props) => {
   const {
@@ -42,9 +43,10 @@ const Screen = (props) => {
     );
   } else if (displayMusic) {
     renderComponent = (
-      <div>
-        <h1>Cover Flow</h1>
-      </div>
+      <MusicAlbums
+        songId={props.currentState.activeSongId}
+        songs={props.currentState.songs}
+      />
     );
   } else if (displayGames) {
     renderComponent = (

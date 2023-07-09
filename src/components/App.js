@@ -5,6 +5,7 @@ import ZingTouch from "zingtouch";
 
 function App() {
   const CurrentAngleRef = useRef(0);
+  const prevSongAngleRef = useRef(0);
   const [currentSelected, setCurrentSelected] = useState("coverflow");
   const IPOD = "ipod";
   const COVERFLOW = "coverflow";
@@ -20,6 +21,10 @@ function App() {
       displayGames: false,
       displaySettings: false,
     },
+    songs: [],
+    isMusicPlaying: false,
+    isMusicPlayerActive: false,
+    activeSongId: 0,
     pageTitle: IPOD,
   });
 
@@ -45,6 +50,8 @@ function App() {
     const targetElement = document.getElementById("circle");
     const zingWheel = new ZingTouch.Region(targetElement);
 
+    fetchData();
+
     const handleRotation = (e) => {
       CurrentAngleRef.current =
         CurrentAngleRef.current + e.detail.distanceFromLast;
@@ -69,6 +76,22 @@ function App() {
         ) {
           setSelectState(SETTINGS);
         }
+      } else if (
+        state.visibleComponent.displayMusic &&
+        !state.isMusicPlayerActive
+      ) {
+        if (Math.abs(prevSongAngleRef.current - myAngle) >= 50) {
+          // console.log(prevSongAngleRef.current);
+          // console.log(myAngle);
+          // console.log(Math.abs(prevSongAngleRef.current - myAngle));
+          if (e.detail.distanceFromLast > 0) {
+            increaseActiveSong();
+          } else {
+            decreaseActiveSong();
+          }
+
+          prevSongAngleRef.current = myAngle;
+        }
       }
     };
     zingWheel.bind(targetElement, "rotate", handleRotation, {
@@ -78,11 +101,26 @@ function App() {
     return () => {
       zingWheel.unbind(targetElement, "rotate", handleRotation);
     };
-  }, [state.visibleComponent.displayHome]);
+  }, [
+    state.visibleComponent.displayHome,
+    state.visibleComponent.displayMusic,
+    state.isMusicPlayerActive,
+  ]);
 
   // useEffect(() => {
   //   console.log(state);
-  // }, [state]);
+  //   console.log(state.activeSongId);
+  // }, [state, currentSelected]);
+
+  // Make API CALL "Reading data from local stored musicList.json"
+  const fetchData = async () => {
+    const response = await fetch("musicList.json");
+    const data = await response.json();
+    setState((prevState) => ({
+      ...prevState,
+      songs: data.songs,
+    }));
+  };
 
   const handleCenterBtnClick = (e) => {
     e.preventDefault();
@@ -147,13 +185,81 @@ function App() {
       return;
     } else if (state.visibleComponent.displayCoverflow) {
       console.log("COVER FLOW Clicked!!");
+      setState((prevState) => ({
+        ...prevState,
+        visibleComponent: {
+          ...prevState.visibleComponent,
+          displayHome: !prevState.visibleComponent.displayHome,
+          displayCoverflow: !prevState.visibleComponent.displayCoverflow,
+        },
+        pageTitle: IPOD,
+      }));
+      // setCurrentSelected(COVERFLOW);
     } else if (state.visibleComponent.displayMusic) {
-      console.log("Music Clicked!!");
+      console.log(state.isMusicPlayerActive);
+      if (state.isMusicPlayerActive) {
+        setState((prevState) => ({
+          ...prevState,
+          isMusicPlayerActive: false,
+        }));
+      } else {
+        console.log("Music Clicked!!");
+        setState((prevState) => ({
+          ...prevState,
+          visibleComponent: {
+            ...prevState.visibleComponent,
+            displayHome: !prevState.visibleComponent.displayHome,
+            displayMusic: !prevState.visibleComponent.displayMusic,
+          },
+          pageTitle: IPOD,
+        }));
+        setCurrentSelected(COVERFLOW);
+      }
     } else if (state.visibleComponent.displayGames) {
       console.log("Games Clicked!!");
+      setState((prevState) => ({
+        ...prevState,
+        visibleComponent: {
+          ...prevState.visibleComponent,
+          displayHome: !prevState.visibleComponent.displayHome,
+          displayGames: !prevState.visibleComponent.displayGames,
+        },
+        pageTitle: IPOD,
+      }));
+      setCurrentSelected(COVERFLOW);
     } else if (state.visibleComponent.displaySettings) {
       console.log("Settings Clicked!!");
+      setState((prevState) => ({
+        ...prevState,
+        visibleComponent: {
+          ...prevState.visibleComponent,
+          displayHome: !prevState.visibleComponent.displayHome,
+          displaySettings: !prevState.visibleComponent.displaySettings,
+        },
+        pageTitle: IPOD,
+      }));
+
+      setCurrentSelected(COVERFLOW);
     }
+  };
+
+  const increaseActiveSong = () => {
+    setState((prevState) => {
+      const songId = prevState.activeSongId + 1;
+      return {
+        ...prevState,
+        activeSongId: songId > prevState.songs.length - 1 ? 0 : songId,
+      };
+    });
+  };
+  const decreaseActiveSong = () => {
+    setState((prevState) => {
+      const songId = prevState.activeSongId - 1;
+      return {
+        ...prevState,
+        activeSongId: songId < 0 ? prevState.songs.length - 1 : songId,
+      };
+    });
   };
 
   return (

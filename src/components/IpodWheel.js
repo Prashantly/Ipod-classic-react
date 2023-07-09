@@ -1,5 +1,5 @@
 import React from "react";
-import { PlayPause, NextTrack, PrevTrack, Menu } from "../icons";
+import { PlayPause, NextTrack, PrevTrack, Menu } from "../assets";
 
 const IpodWheel = (props) => {
   return (

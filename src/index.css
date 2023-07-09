@@ -198,7 +198,8 @@ ul {
   transform-origin: 180%;
 }
 
-.menu-options .option.selected {
+.menu-options .option.selected,
+.song-card.selected {
   font-weight: bold;
   background: linear-gradient(rgb(60, 184, 255) 0%, rgb(52, 122, 181) 100%);
   color: #fff;
@@ -225,4 +226,50 @@ ul {
 .gameWrapper > img {
   height: 100%;
   width: 100%;
+}
+
+/* Music.js styles */
+.music-list {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  animation: fade 0.5s;
+}
+
+.music-list .song-card {
+  display: flex;
+  box-shadow: 0 0 1px 0 #0b0b0c, 0 0 0 0px #616060;
+  padding: 0;
+  border-radius: 2px;
+  border: none;
+}
+
+.music-list .song-card:not(:first-child) {
+  margin-top: 2px;
+}
+
+.music-list .song-card .left {
+  flex: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.music-list .song-card .left img {
+  height: 28px;
+  width: 32px;
+}
+
+.music-list .song-card .right {
+  position: relative;
+  flex: 10;
+  height: 30px;
+  width: 30px;
+}
+
+.song-card .right .song-singer,
+.song-title {
+  font-size: 11px;
+  text-align: right;
+  padding: 0 5px;
+  font-weight: 600;
 }

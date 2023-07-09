@@ -1,0 +1,44 @@
+{
+  "songs": [
+    {
+      "name": "Despacito",
+      "singer": "Luis Fonsi",
+      "cover": "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
+      "cover28": "https://e-cdns-images.dzcdn.net/images/cover/ce3bd624637f9c5439d9b33f62454644/28x28-000000-80-0-0.jpg",
+      "musicSrc": "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
+      "length": "281"
+    },
+    {
+      "name": "Dorost Nemisham",
+      "singer": "Sirvan Khosravi",
+      "cover": "https://res.cloudinary.com/ehsanahmadi/image/upload/v1573758778/Sirvan-Khosravi-Dorost-Nemisham_glicks.jpg",
+      "cover28": "https://e-cdns-images.dzcdn.net/images/cover/e7be525c05b1942e1844d0073f7b9ab5/28x28-000000-80-0-0.jpg",
+      "musicSrc": "https://res.cloudinary.com/ehsanahmadi/video/upload/v1573550770/Sirvan-Khosravi-Dorost-Nemisham-128_kb8urq.mp3",
+      "length": "219"
+    },
+    {
+      "name": "Bedtime Stories",
+      "singer": "Jay Chou",
+      "cover": "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
+      "cover28": "https://e-cdns-images.dzcdn.net/images/cover/bd2ecb0323ce31cea94e33154904ed85/28x28-000000-80-0-0.jpg",
+      "musicSrc": "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
+      "length": "228"
+    },
+    {
+      "name": "Summer Of '69",
+      "singer": "Bryan Adams",
+      "cover": "https://e-cdns-images.dzcdn.net/images/artist/b52571c814d48a1648c8b1df8ef67450/250x250-000000-80-0-0.jpg",
+      "cover28": "https://e-cdns-images.dzcdn.net/images/artist/b52571c814d48a1648c8b1df8ef67450/28x28-000000-80-0-0.jpg",
+      "musicSrc": "https://cdns-preview-a.dzcdn.net/stream/c-a39fc1a77b3a221c68103011a6787ac5-10.mp3",
+      "length": "30"
+    },
+    {
+      "name": "Dorost Nemisham",
+      "singer": "Sirvan Khosravi",
+      "cover": "https://res.cloudinary.com/ehsanahmadi/image/upload/v1573758778/Sirvan-Khosravi-Dorost-Nemisham_glicks.jpg",
+      "cover28": "https://e-cdns-images.dzcdn.net/images/cover/e7be525c05b1942e1844d0073f7b9ab5/28x28-000000-80-0-0.jpg",
+      "musicSrc": "https://res.cloudinary.com/ehsanahmadi/video/upload/v1573550770/Sirvan-Khosravi-Dorost-Nemisham-128_kb8urq.mp3",
+      "length": "281"
+    }
+  ]
+}
