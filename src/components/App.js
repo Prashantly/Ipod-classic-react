@@ -6,6 +6,7 @@ import ZingTouch from "zingtouch";
 function App() {
   const CurrentAngleRef = useRef(0);
   const prevSongAngleRef = useRef(0);
+  const prevCoverflowAngleRef = useRef(0);
   const [currentSelected, setCurrentSelected] = useState("coverflow");
   const IPOD = "ipod";
   const COVERFLOW = "coverflow";
@@ -22,8 +23,10 @@ function App() {
       displaySettings: false,
     },
     songs: [],
+    albums: [],
     isMusicPlaying: false,
     isMusicPlayerActive: false,
+    activeCoverflow: 0,
     activeSongId: 0,
     pageTitle: IPOD,
   });
@@ -51,6 +54,7 @@ function App() {
     const zingWheel = new ZingTouch.Region(targetElement);
 
     fetchData();
+    fetchAlbumData();
 
     const handleRotation = (e) => {
       CurrentAngleRef.current =
@@ -92,6 +96,14 @@ function App() {
 
           prevSongAngleRef.current = myAngle;
         }
+      } else if (state.visibleComponent.displayCoverflow) {
+        if (Math.abs(prevCoverflowAngleRef.current - myAngle) >= 50) {
+          if (e.detail.distanceFromLast > 0) {
+            increaseActiveCoverflow();
+          } else {
+            decreaseActiveCoverflow();
+          }
+        }
       }
     };
     zingWheel.bind(targetElement, "rotate", handleRotation, {
@@ -105,6 +117,7 @@ function App() {
     state.visibleComponent.displayHome,
     state.visibleComponent.displayMusic,
     state.isMusicPlayerActive,
+    state.visibleComponent.displayCoverflow,
   ]);
 
   // useEffect(() => {
@@ -119,6 +132,27 @@ function App() {
     setState((prevState) => ({
       ...prevState,
       songs: data.songs,
+    }));
+  };
+
+  // Make API CALL "Reading data from local stored albumData.json"
+  const fetchAlbumData = async () => {
+    const response = await fetch("albumData.json");
+    const data = await response.json();
+    // console.log(data.results);
+    let albumsArray = [];
+    data.results.forEach((album) => {
+      albumsArray.push({
+        albumId: album.id,
+        albumName: album.name,
+        artistName: album.artistName,
+        artworkURL: album.artworkUrl100,
+        albumURL: album.url,
+      });
+    });
+    setState((prevState) => ({
+      ...prevState,
+      albums: albumsArray.slice(0, 10),
     }));
   };
 
@@ -215,6 +249,7 @@ function App() {
         setState((prevState) => ({
           ...prevState,
           isMusicPlayerActive: false,
+          isMusicPlaying: !prevState.isMusicPlaying,
         }));
       } else {
         console.log("Music Clicked!!");
@@ -255,6 +290,26 @@ function App() {
 
       setCurrentSelected(COVERFLOW);
     }
+  };
+
+  const increaseActiveCoverflow = () => {
+    setState((prevState) => {
+      const activeId = prevState.activeCoverflow + 1;
+      return {
+        ...prevState,
+        activeCoverflow: activeId > prevState.albums.length ? 0 : activeId,
+      };
+    });
+  };
+
+  const decreaseActiveCoverflow = () => {
+    setState((prevState) => {
+      const activeId = prevState.activeCoverflow - 1;
+      return {
+        ...prevState,
+        activeCoverflow: activeId < 0 ? prevState.albums.length - 1 : activeId,
+      };
+    });
   };
 
   const increaseActiveSong = () => {

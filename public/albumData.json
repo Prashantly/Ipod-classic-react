@@ -1,0 +1,673 @@
+{
+  "results": [
+    {
+      "artistName": "Anuel AA & Ozuna",
+      "id": "1549326047",
+      "releaseDate": "2021-01-22",
+      "name": "Los Dioses",
+      "kind": "album",
+      "copyright": "℗ 2021 Real Hasta La Muerte LLC & Aura Music Corp.",
+      "artistId": "996166916",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&ids=996166916-283578837&app=music",
+      "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/36/85/8c/36858c09-446b-10dc-06ff-01517697696c/697691883991.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "1119",
+          "name": "Urbano latino",
+          "url": "https://itunes.apple.com/us/genre/id1119"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "12",
+          "name": "Latin",
+          "url": "https://itunes.apple.com/us/genre/id12"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/los-dioses/1549326047?app=music"
+    },
+    {
+      "artistName": "Young Dolph",
+      "id": "1549493664",
+      "releaseDate": "2021-01-22",
+      "name": "Rich Slave (Deluxe)",
+      "kind": "album",
+      "copyright": "℗ 2021 Paper Route EMPIRE",
+      "artistId": "458140076",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/young-dolph/458140076?app=music",
+      "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/be/82/fe/be82fe07-f5e6-8f26-651e-664bb1ba2b99/194690422300_cover.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "18",
+          "name": "Hip-Hop/Rap",
+          "url": "https://itunes.apple.com/us/genre/id18"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/rich-slave-deluxe/1549493664?app=music"
+    },
+    {
+      "artistName": "Logic1000",
+      "id": "1541034661",
+      "releaseDate": "2021-01-22",
+      "name": "You've Got the Whole Night to Go - EP",
+      "kind": "album",
+      "copyright": "℗ 2021 Therapy distributed by Because Music",
+      "artistId": "1461794167",
+      "artistUrl": "https://music.apple.com/us/artist/logic1000/1461794167?app=music",
+      "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/6a/ca/d9/6acad920-799a-3c03-ba86-4fe358b049c3/5060766767871_cover.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "17",
+          "name": "Dance",
+          "url": "https://itunes.apple.com/us/genre/id17"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/youve-got-the-whole-night-to-go-ep/1541034661?app=music"
+    },
+    {
+      "artistName": "Lil Skies",
+      "id": "1544865012",
+      "releaseDate": "2021-01-22",
+      "name": "Unbothered",
+      "kind": "album",
+      "copyright": "℗ 2020 All We Got Ent. / Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States. A Warner Music Group Company.",
+      "artistId": "1162362760",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/lil-skies/1162362760?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/fb/8c/6a/fb8c6a26-b350-b555-662c-c22e870fa60b/075679805119.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "18",
+          "name": "Hip-Hop/Rap",
+          "url": "https://itunes.apple.com/us/genre/id18"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/unbothered/1544865012?app=music"
+    },
+    {
+      "artistName": "Willie Jones",
+      "id": "1549124401",
+      "releaseDate": "2021-01-22",
+      "name": "Right Now (Apple Music Film Edition)",
+      "kind": "album",
+      "copyright": "℗ 2021 The Penthouse / EMPIRE",
+      "artistId": "1033368285",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/willie-jones/1033368285?app=music",
+      "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/a3/eb/8a/a3eb8a2e-2428-0733-aada-db5e4e2feab4/194690427657_cover.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "6",
+          "name": "Country",
+          "url": "https://itunes.apple.com/us/genre/id6"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "1037",
+          "name": "Contemporary Country",
+          "url": "https://itunes.apple.com/us/genre/id1037"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/right-now-apple-music-film-edition/1549124401?app=music"
+    },
+    {
+      "artistName": "Bicep",
+      "id": "1531704818",
+      "releaseDate": "2021-01-22",
+      "name": "Isles",
+      "kind": "album",
+      "copyright": "℗ 2021 Ninja Tune",
+      "artistId": "406148755",
+      "artistUrl": "https://music.apple.com/us/artist/bicep/406148755?app=music",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/75/c2/64/75c264b0-2be8-6b67-a396-513d5711d3c9/dj.jifvgiac.png/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/isles/1531704818?app=music"
+    },
+    {
+      "artistName": "Rhye",
+      "id": "1533898535",
+      "releaseDate": "2021-01-22",
+      "name": "Home",
+      "kind": "album",
+      "copyright": "℗ 2020 Loma Vista Recordings., Distributed by Concord.",
+      "artistId": "490808665",
+      "artistUrl": "https://music.apple.com/us/artist/rhye/490808665?app=music",
+      "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/a4/06/fa/a406fa66-b73d-22f0-255c-c08c11098ea1/20CRGIM23530.rgb.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/home/1533898535?app=music"
+    },
+    {
+      "artistName": "Wardruna",
+      "id": "1498752476",
+      "releaseDate": "2021-01-22",
+      "name": "Kvitravn",
+      "kind": "album",
+      "copyright": "℗ 2020 By Norse Music",
+      "artistId": "299406921",
+      "artistUrl": "https://music.apple.com/us/artist/wardruna/299406921?app=music",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/46/3f/b1/463fb1b3-37d8-da28-f6ed-38ad161e5223/886448191353.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "19",
+          "name": "Worldwide",
+          "url": "https://itunes.apple.com/us/genre/id19"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/kvitravn/1498752476?app=music"
+    },
+    {
+      "artistName": "Bluey",
+      "id": "1539376375",
+      "releaseDate": "2021-01-22",
+      "name": "Bluey the Album",
+      "kind": "album",
+      "copyright": "℗ 2021 Ludo Studio",
+      "artistId": "1538988888",
+      "artistUrl": "https://music.apple.com/us/artist/bluey/1538988888?app=music",
+      "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/b4/e9/7d/b4e97d1b-c24b-73bc-3dbd-3e94cfb6f319/5032698639618.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "4",
+          "name": "Children's Music",
+          "url": "https://itunes.apple.com/us/genre/id4"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/bluey-the-album/1539376375?app=music"
+    },
+    {
+      "artistName": "ELIO",
+      "id": "1547735824",
+      "releaseDate": "2021-01-21",
+      "name": "Can You Hear Me Now?",
+      "kind": "album",
+      "copyright": "℗ 2021 ELIO",
+      "artistId": "1501417625",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/elio/1501417625?app=music",
+      "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/cc/c0/73/ccc0738d-5213-82b7-9af8-c445282a3fe3/5059033591707.png/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "14",
+          "name": "Pop",
+          "url": "https://itunes.apple.com/us/genre/id14"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/can-you-hear-me-now/1547735824?app=music"
+    },
+    {
+      "artistName": "CARM",
+      "id": "1533186436",
+      "releaseDate": "2021-01-22",
+      "name": "CARM",
+      "kind": "album",
+      "copyright": "℗ 2021 37d03d",
+      "artistId": "1511038542",
+      "artistUrl": "https://music.apple.com/us/artist/carm/1511038542?app=music",
+      "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/97/0f/2c/970f2cac-ce91-819b-ac11-51f89f68e917/656605361055.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "20",
+          "name": "Alternative",
+          "url": "https://itunes.apple.com/us/genre/id20"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/carm/1533186436?app=music"
+    },
+    {
+      "artistName": "Maggie Lindemann",
+      "id": "1530275957",
+      "releaseDate": "2021-01-22",
+      "name": "PARANOIA",
+      "kind": "album",
+      "copyright": "℗ 2021 swixxzaudio",
+      "artistId": "1035916223",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/maggie-lindemann/1035916223?app=music",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5d/8c/ca/5d8cca6c-813b-8faf-e284-f00af2162ab1/20UMGIM76289.rgb.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "20",
+          "name": "Alternative",
+          "url": "https://itunes.apple.com/us/genre/id20"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/paranoia/1530275957?app=music"
+    },
+    {
+      "artistName": "Asphyx",
+      "id": "1537463451",
+      "releaseDate": "2021-01-22",
+      "name": "Necroceros",
+      "kind": "album",
+      "copyright": "℗ 2021 Century Media Records Ltd.",
+      "artistId": "104009246",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/asphyx/104009246?app=music",
+      "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/72/b3/4e/72b34e79-22d8-8403-37d5-6bc8b34cb874/886448719588.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "1153",
+          "name": "Metal",
+          "url": "https://itunes.apple.com/us/genre/id1153"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "21",
+          "name": "Rock",
+          "url": "https://itunes.apple.com/us/genre/id21"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/necroceros/1537463451?app=music"
+    },
+    {
+      "artistName": "Lande Hekt",
+      "id": "1524325372",
+      "releaseDate": "2021-01-22",
+      "name": "Going to Hell",
+      "kind": "album",
+      "copyright": "℗ 2021 Get Better Records",
+      "artistId": "956585203",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/lande-hekt/956585203?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/5e/11/2c/5e112c21-8b48-94e9-fdbd-e82dc4b17da4/634457030435.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "1004",
+          "name": "Indie Rock",
+          "url": "https://itunes.apple.com/us/genre/id1004"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "20",
+          "name": "Alternative",
+          "url": "https://itunes.apple.com/us/genre/id20"
+        },
+        {
+          "genreId": "14",
+          "name": "Pop",
+          "url": "https://itunes.apple.com/us/genre/id14"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/going-to-hell/1524325372?app=music"
+    },
+    {
+      "artistName": "So Percussion, Gilbert Kalish & Dawn Upshaw",
+      "id": "1541180863",
+      "releaseDate": "2021-01-22",
+      "name": "Caroline Shaw: Narrow Sea - EP",
+      "kind": "album",
+      "copyright": "℗ 2021 Caroline Shaw and Sō Percussion, under exclusive license to Nonesuch Records Inc.",
+      "artistId": "41742963",
+      "artistUrl": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&ids=41742963-21900312-286066&app=music",
+      "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/81/80/0a/81800a77-7914-2923-de42-e5d0b6708657/075597917888.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "5",
+          "name": "Classical",
+          "url": "https://itunes.apple.com/us/genre/id5"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/caroline-shaw-narrow-sea-ep/1541180863?app=music"
+    },
+    {
+      "artistName": "Palberta",
+      "id": "1532330607",
+      "releaseDate": "2021-01-22",
+      "name": "Palberta5000",
+      "kind": "album",
+      "copyright": "℗ 2021 Wharf Cat Records",
+      "artistId": "977200012",
+      "artistUrl": "https://music.apple.com/us/artist/palberta/977200012?app=music",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/90/23/dd/9023ddfd-6fc9-9203-ad82-1a94acc730fd/cover.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "20",
+          "name": "Alternative",
+          "url": "https://itunes.apple.com/us/genre/id20"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/palberta5000/1532330607?app=music"
+    },
+    {
+      "artistName": "Widowspeak",
+      "id": "1544877351",
+      "releaseDate": "2021-01-22",
+      "name": "Honeychurch - EP",
+      "kind": "album",
+      "copyright": "℗ 2021 Captured Tracks",
+      "artistId": "420935735",
+      "artistUrl": "https://music.apple.com/us/artist/widowspeak/420935735?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/0d/9a/9b/0d9a9ba6-5bc8-a0ac-fe77-569848c1613f/817949034030_small.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "20",
+          "name": "Alternative",
+          "url": "https://itunes.apple.com/us/genre/id20"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/honeychurch-ep/1544877351?app=music"
+    },
+    {
+      "artistName": "Special Request & Tim Reaper",
+      "id": "1544286488",
+      "releaseDate": "2021-01-22",
+      "name": "Hooversound Presents: Special Request and Tim Reaper - EP",
+      "kind": "album",
+      "copyright": "℗ 2021 Hooversound Recordings",
+      "artistId": "141309086",
+      "artistUrl": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&ids=141309086-370912601&app=music",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f4/a7/45/f4a74542-4ce8-9ad3-2150-f91b6f6cadfd/5060870471152.png/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/hooversound-presents-special-request-and-tim-reaper-ep/1544286488?app=music"
+    },
+    {
+      "artistName": "Epik High",
+      "id": "1548249682",
+      "releaseDate": "2021-01-18",
+      "name": "Epik High Is Here 上, Pt. 1",
+      "kind": "album",
+      "copyright": "℗ 2021 OURS Co.,under license to Kakao M Corp.",
+      "artistId": "139334133",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/epik-high/139334133?app=music",
+      "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/1a/b2/fc/1ab2fc02-46ae-8dbc-bba4-bd074d21d15a/EHIH_01_COVER.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "18",
+          "name": "Hip-Hop/Rap",
+          "url": "https://itunes.apple.com/us/genre/id18"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "14",
+          "name": "Pop",
+          "url": "https://itunes.apple.com/us/genre/id14"
+        },
+        {
+          "genreId": "51",
+          "name": "K-Pop",
+          "url": "https://itunes.apple.com/us/genre/id51"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/epik-high-is-here-%E4%B8%8A-pt-1/1548249682?app=music"
+    },
+    {
+      "artistName": "DMX Krew",
+      "id": "1541394860",
+      "releaseDate": "2021-01-25",
+      "name": "Overseer - EP",
+      "kind": "album",
+      "copyright": "℗ 2020 Cultivated Electronics",
+      "artistId": "127926002",
+      "artistUrl": "https://music.apple.com/us/artist/dmx-krew/127926002?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/0b/6a/c3/0b6ac373-b709-38aa-d682-55d68d47b4b3/8718723162814.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "17",
+          "name": "Dance",
+          "url": "https://itunes.apple.com/us/genre/id17"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/overseer-ep/1541394860?app=music"
+    },
+    {
+      "artistName": "Alycia Bella",
+      "id": "1547351629",
+      "releaseDate": "2021-01-22",
+      "name": "Muse",
+      "kind": "album",
+      "copyright": "℗ 2021 Hurt People, Hurt People LLC",
+      "artistId": "1503601149",
+      "contentAdvisoryRating": "Explicit",
+      "artistUrl": "https://music.apple.com/us/artist/alycia-bella/1503601149?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/7b/b8/81/7bb8810a-02a5-3fda-eae6-9fea629ccb85/20UM1IM18126.rgb.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "15",
+          "name": "R&B/Soul",
+          "url": "https://itunes.apple.com/us/genre/id15"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/muse/1547351629?app=music"
+    },
+    {
+      "artistName": "Various Artists",
+      "id": "1546012800",
+      "releaseDate": "2021-01-22",
+      "name": "3afak: Love to NYC",
+      "kind": "album",
+      "copyright": "℗ 2020 3AFAK",
+      "artistId": "151566958",
+      "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/96/03/34/9603346e-e4aa-2ec4-86c9-de5a87989dbf/840200501743_cover.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "17",
+          "name": "Dance",
+          "url": "https://itunes.apple.com/us/genre/id17"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/3afak-love-to-nyc/1546012800?app=music"
+    },
+    {
+      "artistName": "Marco Shuttle",
+      "id": "1545130258",
+      "releaseDate": "2021-01-27",
+      "name": "Inner Euphoria - EP",
+      "kind": "album",
+      "copyright": "℗ 2021 Eerie Records",
+      "artistId": "359608101",
+      "artistUrl": "https://music.apple.com/us/artist/marco-shuttle/359608101?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/e4/e0/02/e4e00217-38c5-851e-86c4-d291ec5ab5e4/8718723163927.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "17",
+          "name": "Dance",
+          "url": "https://itunes.apple.com/us/genre/id17"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "1050",
+          "name": "Techno",
+          "url": "https://itunes.apple.com/us/genre/id1050"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/inner-euphoria-ep/1545130258?app=music"
+    },
+    {
+      "artistName": "Heathered Pearls",
+      "id": "1545255654",
+      "releaseDate": "2021-01-20",
+      "name": "Cast Remixes Part I - EP",
+      "kind": "album",
+      "copyright": "℗ 2020 Ghostly International",
+      "artistId": "460093968",
+      "artistUrl": "https://music.apple.com/us/artist/heathered-pearls/460093968?app=music",
+      "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/a0/89/c7/a089c727-90e3-b042-9e0c-1649ab11b325/804297838106.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "7",
+          "name": "Electronic",
+          "url": "https://itunes.apple.com/us/genre/id7"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        },
+        {
+          "genreId": "17",
+          "name": "Dance",
+          "url": "https://itunes.apple.com/us/genre/id17"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/cast-remixes-part-i-ep/1545255654?app=music"
+    },
+    {
+      "artistName": "347aidan & Kenny Beats",
+      "id": "1548569614",
+      "releaseDate": "2021-01-25",
+      "name": "IDWK - Single",
+      "kind": "album",
+      "copyright": "℗ 2021 347RECORDS, under exclusive license to Columbia Records, a Division of Sony Music Entertainment",
+      "artistId": "1467586290",
+      "artistUrl": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&ids=1467586290-1268880537&app=music",
+      "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/76/dd/2e/76dd2ef0-0df8-45fc-01a3-abfe2f68ccad/886449022793.jpg/200x200bb.png",
+      "genres": [
+        {
+          "genreId": "20",
+          "name": "Alternative",
+          "url": "https://itunes.apple.com/us/genre/id20"
+        },
+        {
+          "genreId": "34",
+          "name": "Music",
+          "url": "https://itunes.apple.com/us/genre/id34"
+        }
+      ],
+      "url": "https://music.apple.com/us/album/idwk-single/1548569614?app=music"
+    }
+  ]
+}

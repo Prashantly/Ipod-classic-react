@@ -4,6 +4,7 @@ import raceCar from "../assets/race-car-racing.gif";
 import settings from "../assets/settings.gif";
 import MusicAlbums from "./Music";
 import MusicPlayer from "./MusicPlayer";
+import ImageCarousel from "./Coverflow";
 
 const Screen = (props) => {
   const {
@@ -14,14 +15,10 @@ const Screen = (props) => {
     displaySettings,
   } = props.currentState.visibleComponent;
 
-  const { pageTitle, isMusicPlayerActive } = props.currentState;
-  // console.log(pageTitle);
+  const { pageTitle, isMusicPlayerActive, isMusicPlaying, activeCoverflow } =
+    props.currentState;
 
   let renderComponent = null;
-
-  // console.log(props.currentState.songs[props.currentState.activeSongId]);
-  // console.log(props.currentState.activeSongId);
-  // console.log(props.currentState.isMusicPlaying);
 
   if (displayHome) {
     renderComponent = (
@@ -42,9 +39,10 @@ const Screen = (props) => {
     );
   } else if (displayCoverflow) {
     renderComponent = (
-      <div>
-        <h1>Cover Flow</h1>
-      </div>
+      <ImageCarousel
+        albums={props.currentState.albums}
+        activeCoverflow={activeCoverflow}
+      />
     );
   } else if (displayMusic) {
     if (isMusicPlayerActive) {
@@ -83,8 +81,19 @@ const Screen = (props) => {
       <div className="titlebar">
         <div className="play-icon">
           {/* display play icon */}
-          <i className="fa-solid fa-circle-play"></i>
-          {/* <i class="fa-solid fa-compact-disc fa-spin"></i> */}
+          {isMusicPlaying ? (
+            <i
+              className="fa-solid fa-compact-disc fa-spin"
+              style={{ color: "#F7C71D", fontSize: "19px" }}
+            ></i>
+          ) : (
+            <i
+              className="fa-solid fa-circle-play"
+              style={{ fontSize: "18px" }}
+            ></i>
+          )}
+
+          {/*  */}
         </div>
         <div className="title">
           {/* display title of page */}
