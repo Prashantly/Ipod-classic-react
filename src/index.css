@@ -211,6 +211,22 @@ ul {
   border-right: 3px solid white;
 }
 
+/* MusicPlayer CSS */
+.player-wrapper {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 5px 117px 5px;
+  margin-top: 28px;
+  animation: fade 0.5s;
+}
+
+.react-player {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
 /* games and settings styles */
 .gameWrapper {
   position: relative;
@@ -245,7 +261,7 @@ ul {
 }
 
 .music-list .song-card:not(:first-child) {
-  margin-top: 2px;
+  margin-top: 6px;
 }
 
 .music-list .song-card .left {
@@ -268,7 +284,7 @@ ul {
 
 .song-card .right .song-singer,
 .song-title {
-  font-size: 11px;
+  font-size: 10px;
   text-align: right;
   padding: 0 5px;
   font-weight: 600;

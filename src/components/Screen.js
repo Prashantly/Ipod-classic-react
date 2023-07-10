@@ -3,6 +3,7 @@ import { Battery } from "../assets";
 import raceCar from "../assets/race-car-racing.gif";
 import settings from "../assets/settings.gif";
 import MusicAlbums from "./Music";
+import MusicPlayer from "./MusicPlayer";
 
 const Screen = (props) => {
   const {
@@ -13,10 +14,14 @@ const Screen = (props) => {
     displaySettings,
   } = props.currentState.visibleComponent;
 
-  const { pageTitle } = props.currentState;
+  const { pageTitle, isMusicPlayerActive } = props.currentState;
   // console.log(pageTitle);
 
   let renderComponent = null;
+
+  // console.log(props.currentState.songs[props.currentState.activeSongId]);
+  // console.log(props.currentState.activeSongId);
+  // console.log(props.currentState.isMusicPlaying);
 
   if (displayHome) {
     renderComponent = (
@@ -42,12 +47,23 @@ const Screen = (props) => {
       </div>
     );
   } else if (displayMusic) {
-    renderComponent = (
-      <MusicAlbums
-        songId={props.currentState.activeSongId}
-        songs={props.currentState.songs}
-      />
-    );
+    if (isMusicPlayerActive) {
+      console.log("Render Music Player");
+      renderComponent = (
+        <MusicPlayer
+          song={props.currentState.songs[props.currentState.activeSongId]}
+          songId={props.currentState.activeSongId}
+          isMusicPlaying={props.currentState.isMusicPlaying}
+        />
+      );
+    } else {
+      renderComponent = (
+        <MusicAlbums
+          songId={props.currentState.activeSongId}
+          songs={props.currentState.songs}
+        />
+      );
+    }
   } else if (displayGames) {
     renderComponent = (
       <div className="gameWrapper">

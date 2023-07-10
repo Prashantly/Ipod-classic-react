@@ -176,6 +176,20 @@ function App() {
           pageTitle: SETTINGS,
         }));
       }
+    } else if (state.visibleComponent.displayMusic) {
+      if (!state.isMusicPlayerActive) {
+        //if MusicPlayer is not active then activate it or set it true
+        setState((prevState) => ({
+          ...prevState,
+          isMusicPlayerActive: true,
+          isMusicPlaying: !prevState.isMusicPlaying,
+        }));
+      } else {
+        setState((prevState) => ({
+          ...prevState,
+          isMusicPlaying: !prevState.isMusicPlaying,
+        }));
+      }
     }
   };
 
