@@ -2,8 +2,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #4776e6;
-  background-image: linear-gradient(to left, #4776e6, #8e54e9);
   font-family: "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -35,12 +33,22 @@ ul {
 }
 
 .Ipod {
-  margin: 5% auto;
+  position: relative;
+  margin: 3% auto;
   width: 20em;
   background: #dadada;
-  height: 30em;
+  height: 33em;
   border-radius: 1.3em;
-  box-shadow: inset 0 0 2.4em #555;
+  box-shadow: inset 0 0 2.4em #555, 0 0 1.2em #747474;
+}
+
+.Ipod .icon-image {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 1.2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* IpodWheel component styles */
@@ -105,7 +113,7 @@ ul {
 /* screen styles */
 .Ipod .screen {
   position: relative;
-  top: 0.9em;
+  top: 2.4em;
   margin: 0 auto;
   width: 17em;
   height: 13em;

@@ -359,6 +359,7 @@ function App() {
 
   return (
     <div className="Ipod">
+      <img className="icon-image" src="favicon.ico" alt="icon" />
       <Screen currentState={state} />
       <IpodWheel
         onCenterBtnClick={handleCenterBtnClick}
