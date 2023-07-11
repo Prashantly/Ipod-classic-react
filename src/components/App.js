@@ -3,6 +3,7 @@ import IpodWheel from "./IpodWheel";
 import Screen from "./Screen";
 import ZingTouch from "zingtouch";
 
+//App component
 function App() {
   const CurrentAngleRef = useRef(0);
   const prevSongAngleRef = useRef(0);
@@ -13,6 +14,7 @@ function App() {
   const GAMES = "games";
   const SETTINGS = "settings";
 
+  // state of Ipod App
   const [state, setState] = useState({
     visibleComponent: {
       displayHome: true,
@@ -21,7 +23,9 @@ function App() {
       displayGames: false,
       displaySettings: false,
     },
+    // Songs array
     songs: [],
+    //albums array
     albums: [],
     isMusicPlaying: false,
     isMusicPlayerActive: false,
@@ -30,24 +34,22 @@ function App() {
     pageTitle: IPOD,
   });
 
+  // This function sets the selected state of an element in the list of elements
   const setSelectState = (selected) => {
-    const coverflow = document.getElementById(COVERFLOW);
-    const music = document.getElementById(MUSIC);
-    const games = document.getElementById(GAMES);
-    const settings = document.getElementById(SETTINGS);
-
-    coverflow.classList =
-      music.classList =
-      games.classList =
-      settings.classList =
-        "option";
-
+    const elements = [COVERFLOW, MUSIC, GAMES, SETTINGS];
+    elements.forEach((element) => {
+      document.getElementById(element).classList = "option";
+    });
     const selectedElement = document.getElementById(selected);
+    // Add the "selected" class to the selected element
     selectedElement.classList.add("selected");
+    // Set the current selected element
     setCurrentSelected(selected);
   };
 
-  //useEffect
+  //   UseEffect hook to be executed when state.visibleComponent.displayHome,
+  // state.visibleComponent.displayMusic, state.isMusicPlayerActive,
+  // state.visibleComponent.displayCoverflow changes.
   useEffect(() => {
     const targetElement = document.getElementById("circle");
     const zingWheel = new ZingTouch.Region(targetElement);
@@ -55,6 +57,7 @@ function App() {
     fetchData();
     fetchAlbumData();
 
+    //Handle rotation of wheel and set the component based on angle
     const handleRotation = (e) => {
       CurrentAngleRef.current =
         CurrentAngleRef.current + e.detail.distanceFromLast;
@@ -84,9 +87,7 @@ function App() {
         !state.isMusicPlayerActive
       ) {
         if (Math.abs(prevSongAngleRef.current - myAngle) >= 50) {
-          // console.log(prevSongAngleRef.current);
-          // console.log(myAngle);
-          // console.log(Math.abs(prevSongAngleRef.current - myAngle));
+          //Check the distance between prevSongAngleRef and myAngle
           if (e.detail.distanceFromLast > 0) {
             increaseActiveSong();
           } else {
@@ -101,6 +102,7 @@ function App() {
       draggable: false,
     });
 
+    //Unbind rotate event when useEffect is unmounted
     return () => {
       zingWheel.unbind(targetElement, "rotate", handleRotation);
     };
@@ -110,11 +112,6 @@ function App() {
     state.isMusicPlayerActive,
     state.visibleComponent.displayCoverflow,
   ]);
-
-  // useEffect(() => {
-  //   console.log(state);
-  //   console.log(state.activeSongId);
-  // }, [state, currentSelected]);
 
   // Make API CALL "Reading data from local stored musicList.json"
   const fetchData = async () => {
@@ -130,7 +127,6 @@ function App() {
   const fetchAlbumData = async () => {
     const response = await fetch("albumData.json");
     const data = await response.json();
-    // console.log(data.results);
     let albumsArray = [];
     data.results.forEach((album) => {
       albumsArray.push({
@@ -147,69 +143,54 @@ function App() {
     }));
   };
 
+  // handleCenterBtnClick is a function that handles the click of a button in the center IpodWheel.
   const handleCenterBtnClick = (e) => {
+    // preventDefault prevents the default behavior of the event from occurring
     e.preventDefault();
 
+    // If displayHome is true, set visibility of other components and update pageTitle
     if (state.visibleComponent.displayHome) {
-      if (currentSelected === COVERFLOW) {
-        setState((prevState) => ({
-          ...prevState,
-          visibleComponent: {
-            ...prevState.visibleComponent,
-            displayHome: false,
-            displayCoverflow: true,
-          },
-          pageTitle: setPageTitle(COVERFLOW),
-        }));
-      } else if (currentSelected === MUSIC) {
-        setState((prevState) => ({
-          ...prevState,
-          visibleComponent: {
-            ...prevState.visibleComponent,
-            displayHome: false,
-            displayCoverflow: false,
-            displayMusic: true,
-            displayGames: false,
-            displaySettings: false,
-          },
-          pageTitle: setPageTitle(MUSIC),
-        }));
-      } else if (currentSelected === GAMES) {
-        setState((prevState) => ({
-          ...prevState,
-          visibleComponent: {
-            ...prevState.visibleComponent,
-            displayHome: false,
-            displayCoverflow: false,
-            displayMusic: false,
-            displayGames: true,
-            displaySettings: false,
-          },
-          pageTitle: setPageTitle(GAMES),
-        }));
-      } else if (currentSelected === SETTINGS) {
-        setState((prevState) => ({
-          ...prevState,
-          visibleComponent: {
-            ...prevState.visibleComponent,
-            displayHome: false,
-            displayCoverflow: false,
-            displayMusic: false,
-            displayGames: false,
-            displaySettings: true,
-          },
-          pageTitle: setPageTitle(SETTINGS),
-        }));
+      let newState = {
+        ...state,
+        visibleComponent: { ...state.visibleComponent },
+      };
+
+      // switch statement to determine which component needs to be displayed
+      switch (currentSelected) {
+        case COVERFLOW:
+          newState.visibleComponent.displayCoverflow = true;
+          newState.pageTitle = setPageTitle(COVERFLOW);
+          break;
+        case MUSIC:
+          newState.visibleComponent.displayMusic = true;
+          newState.pageTitle = setPageTitle(MUSIC);
+          break;
+        case GAMES:
+          newState.visibleComponent.displayGames = true;
+          newState.pageTitle = setPageTitle(GAMES);
+          break;
+        case SETTINGS:
+          newState.visibleComponent.displaySettings = true;
+          newState.pageTitle = setPageTitle(SETTINGS);
+          break;
+        default:
+          break;
       }
+
+      // set displayHome to false
+      newState.visibleComponent.displayHome = false;
+      // update state with newState
+      setState((prevState) => ({ ...prevState, ...newState }));
     } else if (state.visibleComponent.displayMusic) {
+      // if MusicPlayer is not active then activate it or set it true
       if (!state.isMusicPlayerActive) {
-        //if MusicPlayer is not active then activate it or set it true
         setState((prevState) => ({
           ...prevState,
           isMusicPlayerActive: true,
           isMusicPlaying: !prevState.isMusicPlaying,
         }));
       } else {
+        // toggle isMusicPlaying
         setState((prevState) => ({
           ...prevState,
           isMusicPlaying: !prevState.isMusicPlaying,
@@ -218,6 +199,7 @@ function App() {
     }
   };
 
+  //Hnadles Menu Button click
   const handleMenuBtnClick = () => {
     if (state.visibleComponent.displayHome) {
       console.log("Menu clicked!!");
@@ -240,8 +222,9 @@ function App() {
         setState((prevState) => ({
           ...prevState,
           isMusicPlayerActive: false,
-          isMusicPlaying: !prevState.isMusicPlaying,
+          isMusicPlaying: false,
         }));
+        console.log(state.isMusicPlayerActive);
       } else {
         console.log("Music Clicked!!");
         setState((prevState) => ({
@@ -283,9 +266,10 @@ function App() {
     }
   };
 
+  //handles Play/Pause button click if Component visible is Music
   const handlePlayPauseClick = () => {
     if (state.visibleComponent.displayMusic && state.isMusicPlayerActive) {
-      // console.log("Pause Clicked!!");
+      // Toggle playing status of music
       setState((prevState) => ({
         ...prevState,
         isMusicPlaying: !prevState.isMusicPlaying,
@@ -293,18 +277,21 @@ function App() {
     }
   };
 
+  //handles Next coverFlow selection if Component visible is Coverflow
   const handleNextCoverflow = () => {
     if (state.visibleComponent.displayCoverflow) {
       increaseActiveCoverflow();
     }
   };
 
+  //handles Previous coverFlow selection if Component visible is Coverflow
   const handlePrevCoverflow = () => {
     if (state.visibleComponent.displayCoverflow) {
       decreaseActiveCoverflow();
     }
   };
 
+  //handles Next Song selection if Component visible is Music
   const handleNextClick = () => {
     if (state.visibleComponent.displayMusic && state.isMusicPlayerActive) {
       // console.log("Next Clicked!!");
@@ -312,6 +299,7 @@ function App() {
     }
   };
 
+  //handles Previous Song selection if Component visible is Music
   const handlePrevClick = () => {
     if (state.visibleComponent.displayMusic && state.isMusicPlayerActive) {
       // console.log("Prev Clicked!!");
@@ -319,6 +307,7 @@ function App() {
     }
   };
 
+  //Increase Coverlow selection value by 1
   const increaseActiveCoverflow = () => {
     setState((prevState) => {
       const activeId = prevState.activeCoverflow + 1;
@@ -329,6 +318,7 @@ function App() {
     });
   };
 
+  //Decrease Coverlow selection value by 1
   const decreaseActiveCoverflow = () => {
     setState((prevState) => {
       const activeId = prevState.activeCoverflow - 1;
@@ -339,6 +329,7 @@ function App() {
     });
   };
 
+  //Increase Song selection value by 1
   const increaseActiveSong = () => {
     setState((prevState) => {
       const songId = prevState.activeSongId + 1;
@@ -348,6 +339,8 @@ function App() {
       };
     });
   };
+
+  //Decrease Song selection value by 1
   const decreaseActiveSong = () => {
     setState((prevState) => {
       const songId = prevState.activeSongId - 1;
@@ -358,6 +351,7 @@ function App() {
     });
   };
 
+  //Sets the pageTitle to capitalize value
   const setPageTitle = (input) => {
     const title = input.charAt(0).toUpperCase() + input.slice(1);
     return title;
