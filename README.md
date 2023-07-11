@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Ipod App Using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Mini Ipod App Project which is built using React, CSS, Javascript. It is responsive across all devices.
 
-## Available Scripts
+## User Stories
 
-In the project directory, you can run:
+- Users should be able to access the features like Settings, Menu, Music, Coverflow in the iPod.
+- Users should be able to go back from the particular menu to the main menu on clicking the Menu button and to access the main menu from the home screen using the Menu button.
+- Users should be able to click and hold on the circular menu and move the mouse in a circular fashion inside the menu boundary (white circle is the menu) to navigate in the iPod menu.
+- Users should be able to go inside the menu by clicking the center button.
+- Users should be able to listen to music by selecting “Music Menu”
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Main Menu - Settings, Music, Coverflow, Games,
+- Coverflow Menu - Displays Coverflow Carousel
+- Music Menu - Display Songs list and use can select any song.
+- Games Menu - Diplay Dummy Game.
+- Settings menu - display settings (dummy gif).
+- Sliding feature of the rotating pad to access the menu.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+- Clone the repository:
+  `git clone <repository-url>`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Install the dependencies:
 
-### `npm run build`
+  1.  `cd react-mini-project`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  2.  `npm install`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Start the development server:
+  `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Open your browser and navigate to http://localhost:3000 to access the iPod application.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Packages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - react
+  - react-dom
+  - react-player
+  - react-scripts
+  - web-vitals
+  - zingtouch
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Library: ReactJS
+- Version Control System: Git
+- VCS Hosting: GitHub
+- Programming / Scripting: JavaScript
+- Front-End: HTML, CSS
+- Runtime Environment: NodeJS
+- Integrated Development Environment: VSCode
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Screens
 
-## Learn More
+![Screenshot 2023-07-11 135818 (1)](https://github.com/Prashantly/codeial/assets/99544800/48f7170a-6220-4145-9095-eb981fbc721e)
+![Screenshot 2023-07-11 135926 (1)](https://github.com/Prashantly/codeial/assets/99544800/d69c5ac5-4864-48c7-826d-40d3658fabff)
+![Screenshot 2023-07-11 135938 (1)](https://github.com/Prashantly/codeial/assets/99544800/d777c548-90d5-4b17-b5c0-a6761c2d483d)
+![Screenshot 2023-07-11 135956 (1)](https://github.com/Prashantly/codeial/assets/99544800/d9214dd1-28e9-4b7a-9921-cd9562adfb8d)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Links
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Checkout the Website [Web Application](https://www.example.com)
+- Checkout the Application Demo [Video](https://youtu.be/Iwc-A3JCUz0)
 
-### Code Splitting
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was inspired by the iPod Classic and built as a mini project using React.js. Special thanks to the React.js community for their valuable resources and documentation.
