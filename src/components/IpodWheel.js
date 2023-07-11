@@ -7,13 +7,25 @@ const IpodWheel = (props) => {
       <div className="menuBtn" onClick={props.onMenuBtnClick}>
         <Menu />
       </div>
-      <div className="playPauseBtn">
+      <div className="playPauseBtn" onClick={props.onPlayPauseClick}>
         <PlayPause />
       </div>
-      <div className="nextBtn">
+      <div
+        className="nextBtn"
+        onClick={() => {
+          props.onNextClick();
+          props.onNextCoverflow();
+        }}
+      >
         <NextTrack />
       </div>
-      <div className="prevBtn">
+      <div
+        className="prevBtn"
+        onClick={() => {
+          props.onPrevClick();
+          props.onPrevCoverflow();
+        }}
+      >
         <PrevTrack />
       </div>
       <div className="centerBtn" onClick={props.onCenterBtnClick}></div>

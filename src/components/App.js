@@ -6,7 +6,6 @@ import ZingTouch from "zingtouch";
 function App() {
   const CurrentAngleRef = useRef(0);
   const prevSongAngleRef = useRef(0);
-  const prevCoverflowAngleRef = useRef(0);
   const [currentSelected, setCurrentSelected] = useState("coverflow");
   const IPOD = "ipod";
   const COVERFLOW = "coverflow";
@@ -96,14 +95,6 @@ function App() {
 
           prevSongAngleRef.current = myAngle;
         }
-      } else if (state.visibleComponent.displayCoverflow) {
-        if (Math.abs(prevCoverflowAngleRef.current - myAngle) >= 50) {
-          if (e.detail.distanceFromLast > 0) {
-            increaseActiveCoverflow();
-          } else {
-            decreaseActiveCoverflow();
-          }
-        }
       }
     };
     zingWheel.bind(targetElement, "rotate", handleRotation, {
@@ -168,7 +159,7 @@ function App() {
             displayHome: false,
             displayCoverflow: true,
           },
-          pageTitle: COVERFLOW,
+          pageTitle: setPageTitle(COVERFLOW),
         }));
       } else if (currentSelected === MUSIC) {
         setState((prevState) => ({
@@ -181,7 +172,7 @@ function App() {
             displayGames: false,
             displaySettings: false,
           },
-          pageTitle: MUSIC,
+          pageTitle: setPageTitle(MUSIC),
         }));
       } else if (currentSelected === GAMES) {
         setState((prevState) => ({
@@ -194,7 +185,7 @@ function App() {
             displayGames: true,
             displaySettings: false,
           },
-          pageTitle: GAMES,
+          pageTitle: setPageTitle(GAMES),
         }));
       } else if (currentSelected === SETTINGS) {
         setState((prevState) => ({
@@ -207,7 +198,7 @@ function App() {
             displayGames: false,
             displaySettings: true,
           },
-          pageTitle: SETTINGS,
+          pageTitle: setPageTitle(SETTINGS),
         }));
       }
     } else if (state.visibleComponent.displayMusic) {
@@ -240,7 +231,7 @@ function App() {
           displayHome: !prevState.visibleComponent.displayHome,
           displayCoverflow: !prevState.visibleComponent.displayCoverflow,
         },
-        pageTitle: IPOD,
+        pageTitle: setPageTitle(IPOD),
       }));
       // setCurrentSelected(COVERFLOW);
     } else if (state.visibleComponent.displayMusic) {
@@ -260,7 +251,7 @@ function App() {
             displayHome: !prevState.visibleComponent.displayHome,
             displayMusic: !prevState.visibleComponent.displayMusic,
           },
-          pageTitle: IPOD,
+          pageTitle: setPageTitle(IPOD),
         }));
         setCurrentSelected(COVERFLOW);
       }
@@ -273,7 +264,7 @@ function App() {
           displayHome: !prevState.visibleComponent.displayHome,
           displayGames: !prevState.visibleComponent.displayGames,
         },
-        pageTitle: IPOD,
+        pageTitle: setPageTitle(IPOD),
       }));
       setCurrentSelected(COVERFLOW);
     } else if (state.visibleComponent.displaySettings) {
@@ -285,10 +276,46 @@ function App() {
           displayHome: !prevState.visibleComponent.displayHome,
           displaySettings: !prevState.visibleComponent.displaySettings,
         },
-        pageTitle: IPOD,
+        pageTitle: setPageTitle(IPOD),
       }));
 
       setCurrentSelected(COVERFLOW);
+    }
+  };
+
+  const handlePlayPauseClick = () => {
+    if (state.visibleComponent.displayMusic && state.isMusicPlayerActive) {
+      // console.log("Pause Clicked!!");
+      setState((prevState) => ({
+        ...prevState,
+        isMusicPlaying: !prevState.isMusicPlaying,
+      }));
+    }
+  };
+
+  const handleNextCoverflow = () => {
+    if (state.visibleComponent.displayCoverflow) {
+      increaseActiveCoverflow();
+    }
+  };
+
+  const handlePrevCoverflow = () => {
+    if (state.visibleComponent.displayCoverflow) {
+      decreaseActiveCoverflow();
+    }
+  };
+
+  const handleNextClick = () => {
+    if (state.visibleComponent.displayMusic && state.isMusicPlayerActive) {
+      // console.log("Next Clicked!!");
+      increaseActiveSong();
+    }
+  };
+
+  const handlePrevClick = () => {
+    if (state.visibleComponent.displayMusic && state.isMusicPlayerActive) {
+      // console.log("Prev Clicked!!");
+      decreaseActiveSong();
     }
   };
 
@@ -297,7 +324,7 @@ function App() {
       const activeId = prevState.activeCoverflow + 1;
       return {
         ...prevState,
-        activeCoverflow: activeId > prevState.albums.length ? 0 : activeId,
+        activeCoverflow: activeId > prevState.albums.length - 1 ? 0 : activeId,
       };
     });
   };
@@ -331,12 +358,22 @@ function App() {
     });
   };
 
+  const setPageTitle = (input) => {
+    const title = input.charAt(0).toUpperCase() + input.slice(1);
+    return title;
+  };
+
   return (
     <div className="Ipod">
       <Screen currentState={state} />
       <IpodWheel
         onCenterBtnClick={handleCenterBtnClick}
         onMenuBtnClick={handleMenuBtnClick}
+        onPlayPauseClick={handlePlayPauseClick}
+        onPrevClick={handlePrevClick}
+        onNextClick={handleNextClick}
+        onPrevCoverflow={handlePrevCoverflow}
+        onNextCoverflow={handleNextCoverflow}
       />
     </div>
   );
